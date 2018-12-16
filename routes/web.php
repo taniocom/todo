@@ -12,5 +12,27 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+//Rount::post('',function (){});
+//
+//Route::get('/cal/{num1}/{num2}',function ($num1,$num2){
+//    return $num1+$num2;
+//});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/play/{num1}/{num2}',function ($num1,$num2){
+
+    $sum = $num1+$num2;
+    $data = [
+      "num1"=>$num1,
+      "num2"=>$num2,
+        "sum"=>$sum
+    ];
+
+    return view('play',$data);
 });
