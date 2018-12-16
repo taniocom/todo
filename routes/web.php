@@ -25,6 +25,10 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
 Route::get('/play/{num1}/{num2}',function ($num1,$num2){
 
     $sum = $num1+$num2;
