@@ -29,6 +29,14 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/create', function () {
+    return view('create');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
 Route::get('/play/{num1}/{num2}',function ($num1,$num2){
 
     $sum = $num1+$num2;
