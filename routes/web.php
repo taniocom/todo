@@ -11,40 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/','HomeController@index');
+Route::get('/create','HomeController@create');
+Route::get('/login','HomeController@login');
 
-//Rount::post('',function (){});
-//
-//Route::get('/cal/{num1}/{num2}',function ($num1,$num2){
-//    return $num1+$num2;
-//});
-
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::get('/create', function () {
-    return view('create');
-});
-
-Route::get('/login', function () {
-    return view('login');
-});
-
-Route::get('/play/{num1}/{num2}',function ($num1,$num2){
-
-    $sum = $num1+$num2;
-    $data = [
-      "num1"=>$num1,
-      "num2"=>$num2,
-        "sum"=>$sum
-    ];
-
-    return view('play',$data);
-});

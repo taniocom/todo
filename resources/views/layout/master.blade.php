@@ -14,7 +14,7 @@
 
 <body>
 <div class="container">
-    <h1><i class="fa fa-list"></i> Todo List ::</h1>
+    <h1><i class="fa fa-list"></i>&nbsp;<a href="/">Todo List ::</a></h1>
     @yield('content')
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
