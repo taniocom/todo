@@ -14,4 +14,13 @@
 Route::get('/','HomeController@index');
 Route::get('/create','HomeController@create');
 Route::get('/login','HomeController@login');
+Route::get('/edit/{product_id}','HomeController@edit');
+
+
+Route::post('/store','HomeController@store');
+Route::post('/update','HomeController@update');
+//Route::get('/play',function (){
+//    $products = \App\Product::with('category')->get();
+//    return $products;
+//});
 
